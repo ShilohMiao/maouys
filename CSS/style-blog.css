@@ -1,0 +1,147 @@
+/* 内容 */
+
+/* 面包屑修改 */
+.breadcrumb {
+    margin-bottom: 0;
+    padding: 0 0 5px 0;
+    background-color: #fff;
+    border-radius: inherit;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+.breadcrumb .active{
+    color: #91959c;
+}
+/* 信息 */
+.info-bar {
+    margin-top: 20px;
+}
+.info-bar .info-box{
+    margin-left: 60px;
+    padding-left: 10px;
+    border-left: 4px solid #f1f1f1;
+}
+.info-bar .info-box .date{
+    font-weight: 400;
+    font-size: 16px;
+    margin: 8px 0;
+    color: #333;
+}
+.info-bar .info-box .category{
+    font-weight: 300;
+    font-size: 14px;
+    margin: 8px 0;
+    color: #5d5d5d;
+}
+.info-bar .info-box .tags{
+    color: #888;
+}
+.info-bar .info-box .date a,
+.info-bar .info-box .category a,
+.info-bar .info-box .tags a{
+    color: inherit;
+}
+
+/* 正文内容 */
+.content-mian {
+    position: inherit;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ddd;   
+}
+.content-mian img {
+    margin-bottom: 1.35em;
+    max-width: 100%;
+    height: auto;
+}
+.content-mian a.more-link {
+    font-size: 14px;
+    font-weight: 300;
+    width: 100px;
+    border: 1px solid #2fa0ec;
+    border-radius: 2px;
+    color: white;
+    background: #2fa0ec;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+       
+}
+.content-mian a.more-link:hover {    
+    font-weight: 400;
+    color: #2fa0ec;
+    background: white;
+}
+
+
+/* 右边菜单栏 */
+
+.blog-menu {
+    list-style: none;
+    margin: 40px 0 0 30px;
+}
+
+/* 滚动参数 */
+.sticky {
+    position: fixed;
+    margin-top: 100px;
+}
+
+.blog-menu li {
+    margin-bottom: 1em;
+    color: #767676;
+}
+.blog-menu li a {
+    color: inherit;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* 文章页END */
+.end-box {
+    font-weight: 900;
+    font-size: 2em;
+    color: #2098f5;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 100%;
+}
+
+/* 前一篇文章 */
+.post-PrevNext {
+    border-top: 1px solid #ddd;
+    margin-top: 60px;
+    height: 181px;
+    text-align: center;
+    background: #efefef;
+    position: inherit;
+}
+.previous_post_link_bag {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+}
+.previous_post_link_img img {
+    margin: 0;
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+.previous_post_link {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    text-shadow: 1px 1px 4px #ffffff;
+}
+.previous_post_link em {
+    font-style: normal;
+    color: #545454;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.previous_post_link h2 a:hover {
+    color: #047edd;
+}
+

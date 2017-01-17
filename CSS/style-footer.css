@@ -1,0 +1,98 @@
+/* 页脚 */
+
+footer {
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+}
+.footer {
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.footer h5 {
+    color: #676767;
+    font-size: 1.1em;
+}
+.footer li {
+    line-height: 1.7;
+    font-size: 0.9em;
+    list-style: none;
+}
+.footer a {
+    color: #6eabe4;
+    font-size: 1em;
+}
+.footer img {
+    width: 100%;
+    margin: 10px 0 20px;
+}
+.footer p {
+    font-size: 0.9em;
+    color: #767676;
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 767px) {
+    .footer .footer-content {
+        margin: 0 30px 20px;
+        overflow: hidden;
+    }
+    .footer .footer-content ul li {
+        float: left;
+        margin-right: 15px;
+    }
+}
+.footer-content h4 {
+    margin-top: 0;
+}
+.footer ul {
+    color: #5f6569;
+}
+.footer-beian {
+    background: #efefef;
+    border-top: #e1e1e1 1px solid;
+    padding: 10px 0;
+}
+.footer-beian p {
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 1em;
+    padding: 10px;
+    margin: 0;
+}
+.footer-beian p a {
+    color: #6eabe4;
+}
+
+
+
+/* 返回顶部插件 */
+
+#goToTop {
+    position: fixed;
+    bottom: 20px;
+    background: #fff;
+    margin-left: 80px;
+}
+#goToTop a {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 40px;
+    z-index: 1;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10%;
+    background: #fff;
+}
+#goToTop a:hover {
+    box-shadow: 0 0 4px #2098f5;
+}
+#goToTop a .glyphicon-arrow-up {
+    font-size: 24px;
+    padding: 7px;
+    color: #ddd;
+}
+#goToTop a:hover .glyphicon-arrow-up {
+    font-size: 24px;
+    padding: 7px;
+    color: #2098f5;
+}

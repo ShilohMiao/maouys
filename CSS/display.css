@@ -1,0 +1,273 @@
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+
+/*正式样式开始*/
+.one-display {
+    padding-top: 200px;
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+}
+.logo-display{
+    max-width: 240px;
+    margin: 0 auto;
+}
+.logo-display img{
+    width: 100%;
+}
+.next-display {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -10px;
+    z-index: 1040;
+}
+
+
+
+.abut-display {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.one-display .abut-display h1 {
+    color: #fff;
+    font-size: 56px;
+    font-weight: 700;
+}
+/* 打字光标样式 */
+.typed-cursor {
+    opacity: 1;
+    padding: 10px 2px;
+    background: #ffffff;
+    margin: 10px;
+    -webkit-animation: blink 0.5s linear infinite;
+    -moz-animation: blink 0.5s linear infinite;
+    animation: blink 0.5s linear infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+#display-one .next-display .page-scroll .glyphicon,
+#display-three .next-display .page-scroll .glyphicon{
+    font-size: 3em;
+    color: #fff;
+}
+#display-two .next-display .page-scroll .glyphicon,
+#display-four .next-display .page-scroll .glyphicon{
+    font-size: 3em;
+    color: #ccc;
+}
+.mt-100 {
+    margin-top: 100px;
+}
+.mt-60{
+    margin-top: 60px;
+}
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+#display-two {
+    position: relative;
+}
+
+#display-three {
+    
+   position: relative; 
+}
+
+#display-four {
+    position: relative;
+}
+
+.content-mian-design {
+    border-bottom: none;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+
+.four-display {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.four-display h4 {
+    border-left: none;
+    margin-bottom: 10px;
+}
+
+.four-display p {
+    text-align: center;
+    list-style: 1.75;
+}
+
+
+
+.three-display {
+    height: 400px;
+    background-image: url(http://qiniu.sjfan.net/%E8%83%8C%E6%99%AF-%E9%A6%96%E9%A1%B5-%E6%B5%8B%E8%AF%951.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.design-work-display {
+    border: 1px solid #ddd;
+    padding: 10px 25px;
+    color: #aaa;
+}
+
+.design-work-display-box {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#display-five {
+    background-image: url(http://qiniu.sjfan.net/%E8%83%8C%E6%99%AF-%E9%A6%96%E9%A1%B5-%E6%B5%8B%E8%AF%952.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.five-display h4,
+.five-display p{
+    color: #fff;
+}
+
+.display-five-box {
+        background: rgba(34, 34, 34, 0.85);
+}
+
+.five-display h4 {
+    margin-bottom: 40px;
+}
+.go-to-blog{
+    margin: 40px 0 60px;
+}
+.design-work-display-box a {
+    padding: 8px 60px;
+    border: 1px solid #047edd;
+    font-size: 14px;
+    color: #047edd;
+}
+.design-work-display-box a:hover{
+    background: #047edd;
+    color: #fff;
+    border: none;
+}
+.five-display img{
+    max-width: 160px;
+    margin: 0 0 60px; 
+}
+   
+
+#head-title {
+    font-weight: inherit;
+}
+
+.five-display ul {
+    list-style: none;
+}
+
+.five-display li {
+    float: left;
+    color: #fff;
+    font-size: 2.5em;
+    line-height: 1;
+    padding: 30px;
+    width: 110px;
+    text-align: center;
+}
+
+.five-display {
+    margin-bottom: 0;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.five-display ul li a {
+    color: #b1b1b1;
+}
+.five-display ul li a:hover {
+    color: #fff; 
+}
+@media (max-width: 767px) {
+    #display-two img{
+        margin: 0 80px 20px;
+    }
+    #display-two h2{
+        text-align: center;
+    }
+    .one-display{
+        padding-top: 100px;
+    }
+    .abut-display{
+        margin-top: 40px;
+    }
+    .one-display .abut-display h1{
+        font-size: 36px;
+        line-height: 1.5;
+    }
+}
+.four-display p {
+    margin-bottom: 0;
+}
+.five-display p {
+    margin-bottom: 1.5em;
+}
