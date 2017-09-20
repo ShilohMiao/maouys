@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<?php get_template_part( 'headerimg-max'); ?>
 <div class="container container-content design">
     <div class="row">
         <div class="content-mian-design">

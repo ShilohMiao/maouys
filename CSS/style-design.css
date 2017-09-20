@@ -1,6 +1,8 @@
 /* 设计样式 */
 
+
 /* 面包屑修改 */
+
 .design-nav {
     padding: 0;
     margin: 0 0 60px 0;
@@ -15,15 +17,12 @@
     padding: 0 0 5px 0;
     margin-bottom: 0;
 }
-
 .design-nav li {
     float: left;
 }
-
 .design-nav ul li a {
     padding: 0 6px;
 }
-
 .design-nav ul li a:hover {
     color: #555;
 }
@@ -34,10 +33,11 @@
 }
 
 /* 作品列表 */
+
 .content-mian-design {
-    border-bottom: 1px solid #ddd;
     padding-bottom: 40px;
     overflow: hidden;
+    border-bottom: 1px solid #ddd;
 }
 .content-mian-design .design-box {
     margin-bottom: 30px;
@@ -51,7 +51,7 @@
 .content-mian-design .design-box .design-box-2:hover {
     box-shadow: 0 0 6px rgb(175, 175, 175);
 }
-.content-mian-design .design-box .design-box-2 img{
+.content-mian-design .design-box .design-box-2 img {
     width: 100%;
     height: 100%;
 }
@@ -67,62 +67,149 @@
     padding: 20px;
     color: #888;
     background: #fff;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
 }
 .content-mian-design .design-box .design-box-2 .shiloh-over:hover {
     opacity: 1;
 }
 .content-mian-design .design-box .design-box-2 .shiloh-over h3 {
     margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #444;
+    border: none;
+    padding: 0;
 }
-.content-mian-design .design-box .design-box-2 .shiloh-over .timestamp {
+.content-mian-design .design-box .design-box-2 .shiloh-over p {
+    line-height: 1.5;
+    margin-top: 10px;
+}
+.content-mian-design .design-box .design-box-2 .shiloh-over .design-info {
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #ddd;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.02);
+}
+.content-mian-design .design-box .design-box-2 .shiloh-over .design-info .info-box {
+    line-height: 1.5;
+    font-weight: 400;
+    color: #aaa;
+    float: left;
+}
+.content-mian-design .design-box .design-box-2 .shiloh-over .design-info .info-author img {
+    width: 36px;
+    border-radius: 18px;
+    margin-top: 4px;
+    float: right;
 }
 
 /* 设计详情页 */
+
 .design-content {
-    padding-bottom: 80px;
-    padding-top: 40px;
+    padding: 0;
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 60px;
+    background: #fff;
+    z-index: 1;
+    /*     box-shadow: 0 0 2px rgb(175, 175, 175);
+    border-radius: 2px; */
 }
-@media(min-width: 992px){
+.design-content .row {
+    margin: 0;
+}
+.design-content .row .content-box-x {
+    overflow: hidden;
+    /* border-radius: 2px 0 0 2px;
+    border-right: 1px solid #efefef; */
+}
+
+/* .design-content .row .content-box-x .design-content-inbox{
+    padding-bottom: 60px;    
+} */
+
+
+/* .design-content .row .content-box-x .design-content-inbox p{
+    padding: 0 60px;
+}
+.design-content .row .content-box-x .design-content-inbox p:first-child{
+    padding-top: 60px;
+} */
+
+
+/* @media(min-width: 992px){
     .design-content #content{
         padding-right: 60px;
     }
-}
-.design-content #content img {
+} */
+
+.design-content #content .design-content-inbox img {
     max-width: 100%;
     height: auto;
 }
 
 /* 边栏 */
+
 .design-sidbar {
     padding: 0;
+    width: 310px;
+    float: right;
+}
+.design-sidbar .design-title {
+    margin-left: 20px;
+}
+.design-sidbar .design-title h4 {
+    margin: 0 0 20px 0;
 }
 .design-sidbar .design-sidbar-content {
-    padding: 20px;
-    background: #f9f9f9;
-    border: 1px solid #eee;
-    margin-bottom: 20px;
+    background-color: #fff;
+    margin-left: 20px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
+    .design-sidbar {
+        width: 260px;
+    }
     .design-sidbar .design-sidbar-content {
-        width: 242px;
+        width: 240px;
     }
 }
 @media (min-width: 1200px) {
-    .design-sidbar .design-sidbar-content {
-        width: 292px;
+    .design-sidbar {
+        width: 310px;
     }
+    .design-sidbar .design-sidbar-content {
+        width: 290px;
+    }
+}
+.design-sidbar .design-sidbar-content .design-art {
+    border-bottom: 1px dotted #efefef;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
 }
 .design-sidbar .design-sidbar-content p {
     font-size: 1em;
     color: #767676;
-    padding-top: 0;
-    margin-bottom: 0;
     font-weight: 400;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #efefef;
 }
-
+.design-sidbar .design-sidbar-content .design-title {
+    margin-left: 0;
+    border-bottom: 1px solid #efefef;
+    display: none;
+}
+.design-sidbar .design-sidbar-content .design-title h4 {
+    margin: 60px 0 20px;
+}
+.design-sidbar .design-sidbar-content.sticky .design-title {
+    display: inherit;
+}
 .design-sidbar .design-sidbar-content .design-deta {
     margin: 10px 0 20px;
     font-size: 16px;
@@ -131,12 +218,13 @@
 }
 
 /* 工具 */
+
 .design-sidbar .design-sidbar-content .design-tool {
     overflow: hidden;
-    padding-bottom: 30px;
+    padding: 0 0 30px;
     color: #f9f9f9;
 }
-.design-sidbar .design-sidbar-content .design-tool img{
+.design-sidbar .design-sidbar-content .design-tool img {
     width: 100%;
 }
 .tool-box-box {
@@ -146,7 +234,6 @@
     margin-bottom: -10px;
     padding-bottom: 10px;
 }
-
 .tool-box-two {
     width: 36px;
     height: 50px;
@@ -156,12 +243,10 @@
     position: absolute;
     z-index: 1;
 }
-
 .tool-box-two:hover .tool-box-over {
     opacity: 1;
     visibility: visible;
 }
-
 .tool-box-over {
     background: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -178,7 +263,6 @@
     z-index: 1;
     visibility: hidden;
 }
-
 .tool-box-over:before {
     content: "";
     background: #fff;
@@ -196,19 +280,24 @@
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-
 .tool-box-over strong {
     color: #333;
 }
+.tool-box-two .tool-box-over p {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
 
 /* 标签 */
+
 .design-sidbar .design-sidbar-content .design-tags {
     border-top: 1px solid #efefef;
     border-bottom: 1px solid #efefef;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0;
 }
-.design-tags strong{
+.design-art strong,
+.design-tags strong {
     font-size: 16px;
     font-weight: 400;
     color: #91959c;
@@ -217,7 +306,6 @@
     overflow: hidden;
     margin-top: 10px;
 }
-
 .design-tags .design-tags-box a {
     border: 1px solid #c7c7c7;
     color: #232323;
@@ -228,7 +316,6 @@
     font-size: 0.9em;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fbfbfb), to(#e9e9e9));
 }
-
 .design-tags .design-tags-box a:hover {
     background: #007aff;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0096ff), to(#005dff));
@@ -240,13 +327,98 @@
 }
 
 /* 版权 */
+
 .design-sidbar .design-sidbar-content .design-banquan {
-    color: #6c99bf;
-    padding: 20px 10px 10px;
-    line-height: 1.7;
+    color: #8c8c8c;
+    background-color: #f9f9f9;
+    padding: 14px;
+    margin: 20px 0;
     font-size: 0.9em;
-    text-align: justify;
+    border-radius: 4px;
+    border: #efefef solid 1px;
+}
+.design-sidbar .design-sidbar-content .design-banquan .banquan-img {
+    border-bottom: #eee solid 1px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.design-sidbar .design-sidbar-content .design-banquan .banquan-img img {
+    height: 20px;
+    width: auto;
 }
 
+/* 下一篇文章 */
 
+/* 
+.nex-post {
+    position: relative;
+    overflow: hidden;
+    margin: -60px -15px 0;
+}
+.nex-post .post-PrevNext,
+.nex-post .post-PrevNext a .previous_post_link_img img {
+    height: 240px;
+} 
+*/
 
+.design-end-box{
+    margin-top: 60px;
+}
+.design-end-box .end-QRcode-box{
+    margin-top: 15px;
+}
+.design-end-box .end-QRcode-box canvas{
+    width: 150px;
+}
+.design-end-box .netx-box-x{
+    border: 1px solid #e9e9e9;
+}
+.design-end-box .netx-box-x .row{
+    margin: 15px -15px;
+}
+.design-end-box .netx-box-x .row a img{
+    width: 100%;
+    height: auto;
+}
+.design-end-box .netx-box-x .row a h3{
+    margin: 5px 0 10px;
+    line-height: 1em;
+}
+.design-end-box .netx-box-x .row a p{
+    font-size: 1em;
+    line-height: 1.6em;
+    color: #888;
+    margin: 0;
+}
+
+/* 手机适配 */
+
+@media (max-width: 767px) {
+    .design-content {
+        margin-top: -400px;
+        border-radius: 0;
+    }
+    .design-sidbar {
+        width: 100%;
+        background-color: #f8f8f8;
+    }
+    .design-sidbar .design-sidbar-content {
+        background-color: #f8f8f8;
+    }
+    .design-sidbar .design-sidbar-content p {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    #project-sidebar {
+        display: none;
+    }
+    .design-content .row .content-box-x {
+        border-radius: 0;
+    }
+    .design-content .row .content-box-x .design-content-inbox p {
+        padding: 0 20px;
+    }
+    .design-content .row .content-box-x .design-content-inbox p:first-child {
+        padding-top: 40px;
+    }
+}

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<?php get_template_part( 'headerimg-max'); ?>
 <div class="container container-content">
     <div class="row">
        
@@ -7,7 +7,7 @@
         <!--面包屑 -->
         <?php get_template_part( 'article/breadcrumb'); ?>
         
-        <div class="col-md-10">
+        <div id="content" class="col-md-10">
             
             <?php  
                 //循环

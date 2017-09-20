@@ -274,11 +274,22 @@ function maouys_genre( $post_ID = false ){
             foreach( $terms as $term ){
                 $name = $term->name;
                 $link = esc_url( get_term_link( $term, 'genre' ) );
-                echo "<li><a href='$link'>$name</a></li>";
+                echo "<a href='$link'>$name</a>";
             }
     } 
 }
 
+function maouys_genre_onname( $post_ID = false ){
+    if( $post_ID === false ) $post_ID = get_the_ID();
+    $terms = get_the_terms( $post_ID, 'genre' );
+    if( !empty( $terms ) ){
+            foreach( $terms as $term ){
+                $name = $term->name;
+                $link = esc_url( get_term_link( $term, 'genre' ) );
+                echo "$name";
+            }
+    } 
+}
 /*
  * 设计类型分类钩子定义 - 作品标签
  */
@@ -309,8 +320,6 @@ function maouys_setup(){
     register_nav_menu( 'primary_sid', __( '文章边栏菜单' ) );
     //注册作品分类菜单
     register_nav_menu( 'primary_detag', __( '作品分类菜单' ) );
-    //注册程序代码分类菜单
-    register_nav_menu( 'primary_zytag', __( '程序代码分类菜单' ) );
 }
 add_action( 'after_setup_theme','maouys_setup' );
 
@@ -612,12 +621,6 @@ add_filter( 'pre_site_transient_update_plugins', create_function( '$b', "return 
 remove_action( 'load-update-core.php', 'wp_update_themes' );
 add_filter( 'pre_site_transient_update_themes', create_function( '$c', "return null;" ) );
 
-//支持svg上传
-function cc_mime_types( $mimes ){
-	$mimes['svg'] = 'image/svg+xml';
-	return $mimes;
-}
-add_filter( 'upload_mimes', 'cc_mime_types' );
 
 //去掉content图片外的p标签
 function filter_ptags_on_images($content){
@@ -631,18 +634,18 @@ add_filter('the_content', 'filter_ptags_on_images');
 
 function maouys_widgets_init() {
   register_sidebar( array(
-    'name'          =>  __( 'Sidebar Bottom' ),
-    'id'            =>  'sidebar-bottom',
-    'description'   =>  __( 'Sidebar Bottom', 'fenikso' ),
+    'name'          =>  __( 'Sidebar Left' ),
+    'id'            =>  'sidebar-left',
+    'description'   =>  __( 'Sidebar left'),
     'before_widget' =>  '<div id="%1$s" class="%2$s"><section>',
     'after_widget'  =>  '</section></div>',
     'before_title'  =>  '<h5>',
     'after_title'   =>  '</h5>',
   ) );
   register_sidebar( array(
-    'name'          =>  __( 'Sidebar Right', 'fenikso' ),
+    'name'          =>  __( 'Sidebar Right'),
     'id'            =>  'sidebar-right',
-    'description'   =>  __( 'Sidebar Right', 'fenikso' ),
+    'description'   =>  __( 'Sidebar Right'),
     'before_widget' =>  '<div id="%1$s" class="%2$s"><section>',
     'after_widget'  =>  '</section></div>',
     'before_title'  =>  '<div class="title-line"><h3>',
@@ -653,11 +656,6 @@ function maouys_widgets_init() {
 add_action( 'widgets_init', 'maouys_widgets_init' );
 
 
-//保护后台登录
- add_action('login_enqueue_scripts','login_protection');
- function login_protection(){
- if($_GET['password'] != '239hiQ7h1eFxVcyhg1gH')header('Location: http://sjfan.net/');
- }
 
 //去掉标题中的类别名称
 function my_theme_archive_title( $title ) {
@@ -742,3 +740,30 @@ function Bing_filter_time(){
 	return $time;
 }
 add_filter('the_time','Bing_filter_time');
+
+
+/* 为后台编辑器添加前台预览效果 */
+add_editor_style();
+
+function admin_css() {
+//新增一个CSS载入后台
+wp_enqueue_style( "admin_css", get_template_directory_uri() . "/custom-admin.css" );
+}
+add_action("admin_print_styles", "admin_css" );
+
+
+//添加头图
+$defaults = array(
+	'random-default'         => false,  //是否默认随机
+	'width'                  => 1920,      //宽度
+	'height'                 => 400,      //高度
+	'flex-height'            => false,
+	'flex-width'             => false,
+	'default-text-color'     => '',     //默认文本颜色
+	'header-text'            => false,   //顶部文本开关
+	'uploads'                => true,   //是否允许上传
+	'wp-head-callback'       => '',
+	'admin-head-callback'    => '',
+	'admin-preview-callback' => '',
+);
+add_theme_support( 'custom-header', $defaults );

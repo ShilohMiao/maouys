@@ -1,6 +1,8 @@
 /* 内容 */
 
+
 /* 面包屑修改 */
+
 .breadcrumb {
     margin-bottom: 0;
     padding: 0 0 5px 0;
@@ -9,45 +11,89 @@
     border-bottom: 1px solid #ddd;
     overflow: hidden;
 }
-.breadcrumb .active{
+.breadcrumb .active {
     color: #91959c;
 }
+.single-h1,
+.page-h1 {
+    margin: 60px 15px 0;
+}
+@media (min-width: 768px) {
+    .single-h1 {
+        margin: 60px 0 0 200px;
+    }
+    .page-h1 {
+        margin: 60px 0 0 260px;
+    }
+}
+@media (min-width: 992px) {
+    .single-h1 {
+        margin: 60px 170px 0 215px;
+    }
+    .page-h1 {
+        margin: 60px 170px 0 280px;
+    }
+}
+@media (min-width: 1200px) {
+    .single-h1 {
+        margin: 60px 210px 0 260px;
+    }
+    .page-h1 {
+        margin: 60px 210px 0 335px;
+    }
+}
+
 /* 信息 */
+
 .info-bar {
     margin-top: 20px;
 }
-.info-bar .info-box{
-    margin-left: 60px;
+.info-bar .info-box {
     padding-left: 10px;
     border-left: 4px solid #f1f1f1;
 }
-.info-bar .info-box .date{
+@media (min-width: 1200px) {
+    .info-bar .info-box {
+        margin-left: 60px;
+    }
+}
+.info-bar .info-box .date {
     font-weight: 400;
     font-size: 16px;
     margin: 8px 0;
     color: #333;
 }
-.info-bar .info-box .category{
+.info-bar .info-box .category {
     font-weight: 300;
     font-size: 14px;
-    margin: 8px 0;
+    margin: 10px 0 8px;
     color: #5d5d5d;
 }
-.info-bar .info-box .tags{
+.info-bar .info-box .tags {
     color: #888;
 }
 .info-bar .info-box .date a,
 .info-bar .info-box .category a,
-.info-bar .info-box .tags a{
+.info-bar .info-box .tags a {
     color: inherit;
+}
+.info-bar .info-box .tags a {
+    margin-right: 8px;
+}
+.info-bar .info-box .tags a:before {
+    content: "#";
 }
 
 /* 正文内容 */
+
 .content-mian {
     position: inherit;
     margin-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 2px solid #ddd;   
+    border-bottom: 1px solid #ddd;
+}
+.content-mian-single {
+    border-bottom: none;
 }
 .content-mian img {
     margin-bottom: 1.35em;
@@ -65,14 +111,12 @@
     text-align: center;
     margin: 0 auto;
     display: block;
-       
 }
-.content-mian a.more-link:hover {    
+.content-mian a.more-link:hover {
     font-weight: 400;
     color: #2fa0ec;
     background: white;
 }
-
 
 /* 右边菜单栏 */
 
@@ -82,14 +126,21 @@
 }
 
 /* 滚动参数 */
+
 .sticky {
     position: fixed;
     margin-top: 100px;
 }
-
 .blog-menu li {
     margin-bottom: 1em;
     color: #767676;
+}
+.blog-menu li:before {
+    font-family: "iconfont-maouys";
+    content: '\e800';
+    font-size: 9px;
+    margin-right: 0.6em;
+    color: #b1b1b1;
 }
 .blog-menu li a {
     color: inherit;
@@ -97,51 +148,162 @@
     font-weight: 400;
 }
 
-
 /* 文章页END */
+
 .end-box {
-    font-weight: 900;
-    font-size: 2em;
+    /* font-weight: 900; */
+    font-size: 1.8em;
     color: #2098f5;
     text-align: center;
+    /* margin-top: 40px; */
+    padding: 10px;
+    background-color: #fafafa;
+}
+.end-tag-box {
+    margin: 20px 0;
+    padding-bottom: 40px;
+    font-size: 1.2em;
+    color: #999;
+    border-bottom: 1px solid #efefef;
+}
+.end-tag-box a {
+    color: inherit;
+    margin-left: 8px;
+}
+.end-tag-box a:before {
+    content: "#";
+}
+.end-QRcode-box {
     margin-top: 40px;
-    border-radius: 100%;
+    text-align: center;
+}
+.end-QRcode-box-em {
+    text-align: center;
+}
+.end-QRcode-box-em em {
+    top: 0;
+    font-size: 0.8em;
 }
 
 /* 前一篇文章 */
+
+
+/* 关联设计详情页，此处为通用样式，设计详情页特有样式查看对应CSS */
+
 .post-PrevNext {
-    border-top: 1px solid #ddd;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     height: 181px;
     text-align: center;
     background: #efefef;
     position: inherit;
 }
-.previous_post_link_bag {
+.post-PrevNext a .previous_post_link_bag {
     position: absolute;
+    top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(100, 100, 100, 0.5);
 }
-.previous_post_link_img img {
+.post-PrevNext a .previous_post_link_img {
+    position: relative;
+    overflow: hidden;
+}
+.post-PrevNext a .previous_post_link_img img {
     margin: 0;
     height: 180px;
     object-fit: cover;
     width: 100%;
+    -webkit-transition: opacity .25s, -webkit-transform .3s ease-in-out;
+    transition: opacity .25s, -webkit-transform .3s ease-in-out;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
 }
-.previous_post_link {
+.post-PrevNext a:hover .previous_post_link_img img {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.post-PrevNext .previous_post_link {
     position: absolute;
     top: 40px;
     width: 100%;
-    text-shadow: 1px 1px 4px #ffffff;
 }
-.previous_post_link em {
+.post-PrevNext .previous_post_link em {
     font-style: normal;
-    color: #545454;
+    color: #fff;
     font-size: 1.2em;
-    font-weight: 400;
 }
-.previous_post_link h2 a:hover {
-    color: #047edd;
+.previous_post_link h1,
+.previous_post_link h2 {
+    color: #fff;
+    margin-top: 0;
 }
 
+/* 搜索 */
+
+.search-thumbnail img {
+    height: 240px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* 特殊样式-正文自引用样式 */
+
+
+/* 游戏信息 */
+
+.videogame,
+.readbook,
+.movie {
+    background-color: #fbfbfb;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.videogame h4,
+.readbook h4,
+.movie h4 {
+    margin: 0 0 20px;
+}
+.videogame .posterimg,
+.readbook .posterimg,
+.movie .posterimg {
+    width: 30%;
+    float: left;
+}
+.videogame .posterimg img,
+.readbook .posterimg img,
+.movie .posterimg img {
+    margin: 0;
+}
+.videogame .posterinfo,
+.readbook .posterinfo,
+.movie .posterinfo {
+    float: left;
+    width: 68%;
+}
+.videogame .posterinfo ul,
+.readbook .posterinfo ul,
+.movie .posterinfo ul {
+    list-style: none;
+    margin: 0;
+    padding-bottom: 10px;
+}
+.videogame .posterinfo ul li,
+.readbook .posterinfo ul li,
+.movie .posterinfo ul li {
+    font-size: 14px;
+}
+.videogame .posterinfo p,
+.readbook .posterinfo p,
+.movie .posterinfo p {
+    font-size: 14px;
+    margin: 10px 0 0 30px;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+.videogame .posterinfo p em,
+.readbook .posterinfo p em,
+.movie .posterinfo p em {
+    top: 0;
+}

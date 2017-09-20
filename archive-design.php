@@ -1,10 +1,10 @@
 <?php get_header(); ?>
+<?php get_template_part( 'headerimg-max'); ?>
+    <div class="container container-content design">
+        <div class="row">
+            <div class="content-mian-design">
 
-<div class="container container-content design">
-    <div class="row">
-        <div class="content-mian-design">
-           
-            <?php 
+                <?php 
                 //面包屑
                 get_template_part( 'design/breadcrumb');
 
@@ -18,13 +18,12 @@
                 endwhile;
                 endif;
             ?>
-            
-        </div> 
-        
+
+            </div>
+        </div>
         <!--翻页-->
-        <?php get_template_part( 'design/next'); ?>  
-            
+        <?php get_template_part( 'design/next'); ?>
+
     </div>
-</div>
-    
-<?php get_footer(); ?>
+
+    <?php get_footer(); ?>
