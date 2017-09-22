@@ -767,3 +767,14 @@ $defaults = array(
 	'admin-preview-callback' => '',
 );
 add_theme_support( 'custom-header', $defaults );
+
+
+//编辑器添加功能
+add_action('admin_print_scripts', 'my_quicktags');
+function my_quicktags() {
+    wp_enqueue_script(
+        'my_quicktags',
+        get_stylesheet_directory_uri().'/my_quicktags.js',
+        array('quicktags')
+    );
+    }

@@ -27,7 +27,10 @@
 
     </body>
 
-    <script src="http://qiniu.maouys.com/js/jquery.min-1.10.2.js"></script>
+
+
+
+    <!-- <script src="http://qiniu.maouys.com/js/jquery.min-1.10.2.js"></script> -->
     <!-- 边栏固定 -->
     <!-- <script src="http://qiniu.maouys.com/js/stickySidebar.js"></script> -->
     <script src="<?php echo get_template_directory_uri(); ?>/js/stickySidebar.js"></script>
@@ -151,6 +154,10 @@
         });
 
     </script>
+
+
+    <!-- <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script> -->
+
 
 
     </html>

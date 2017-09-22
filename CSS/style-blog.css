@@ -94,6 +94,8 @@
 }
 .content-mian-single {
     border-bottom: none;
+    line-height: 2;
+    font-size: 16px;
 }
 .content-mian img {
     margin-bottom: 1.35em;

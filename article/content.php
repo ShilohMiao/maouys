@@ -44,6 +44,45 @@
                     
                     echo '<div class="content-mian content-mian-single">';
                     the_content(); ?>
+
+    <script>
+    var imgs = document.getElementsByTagName('img');
+    for (var i = 0; i < imgs.length; i++) {
+        if(imgs[i].getAttribute('src').match('qiniu')) {
+            console.log(111);
+            showInfo(imgs[i]);
+        }
+        
+    }
+
+    function showInfo(img) {
+        var xhrExif = new XMLHttpRequest();
+        var link = img.getAttribute('src').match(".*\\.jpg") + '?exif';
+        xhrExif.open('GET', link, false);
+        xhrExif.send('ooo');
+
+        var exif = JSON.parse(xhrExif.responseText);
+        
+        if (xhrExif.readyState == 4 && xhrExif.status == 200) {
+            let datetime,date,model,fnum,extime,iso,flength;
+            if(exif.DateTimeOriginal!=undefined) {
+                datetime = exif.DateTimeOriginal.val.split(/\:|\s/);
+                date = datetime[0] + '-' + datetime[1] + '-' + datetime[2];
+            }
+            
+            model = (exif.Model) ? (exif.Model.val) : '无';
+            fnum = (exif.FNumber) ? (exif.FNumber.val.split(/\//)[1]) : '无';
+            extime = (exif.ExposureTime) ? (exif.ExposureTime.val) : '无';
+            iso = (exif.ISOSpeedRatings) ? (exif.ISOSpeedRatings.val.split(/,\s/)[0]) : '无';
+            flength = (exif.FocalLength) ? (exif.FocalLength.val) : '无';
+            if(model!='无') {
+             img.insertAdjacentHTML('afterend', '<em>' + date + ' <span>|</span> ' + model + ' <span>|</span> f/' + fnum + ' <span>|</span> ' + extime + ' <span>|</span> ISO' + iso + ' <span>|</span> ' + flength + '</em>');
+            }
+        }
+           
+    }
+
+</script>
             <div class="end-box">- END -</div>
             <div class="end-tag-box">标签 :
                 <?php

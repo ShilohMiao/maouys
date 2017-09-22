@@ -115,6 +115,11 @@ em {
     position: relative;
     top: -20px;
 }
+em span{
+    margin: 0 10px;
+    font-weight: 100;
+    color: #ccc;
+}
 
 /* 预设空间 */
 
